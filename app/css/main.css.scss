@@ -103,8 +103,8 @@ h1 {
             cursor: move;
         }
         &.done {
-            color: #999;
             .title {
+                color: #999;
                 text-decoration: line-through;
             }
         }
@@ -113,7 +113,7 @@ h1 {
         }
         .title {
             padding-left: 10px;
-            -webkit-apperance: none;
+            -webkit-appearance: none;
             border: 0;
             font-size: 13px;
             display: inline-block;
