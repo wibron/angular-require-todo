@@ -20,5 +20,5 @@
 
 <footer>
     <p class="left">{{remaining()}} {{verb()}} left</p>
-    <p class="right"><a ng-click="completeAll()" href="">Mark all as complete</a></p>
+    <p ng-show="remaining() > 0" class="right"><a ng-click="completeAll()" href="">Mark all as complete</a></p>
 </footer>
