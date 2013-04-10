@@ -29,6 +29,10 @@ define(['app'], function(app) {
                 }
             };
 
+            $scope.deleteTodo = function(todo) {
+                $scope.todos.splice(todo, 1);
+            }
+
             // A check for counting numbers of completed tasks
             $scope.remaining = function() {
                 var numDone = 0;
