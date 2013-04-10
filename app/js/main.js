@@ -23,6 +23,8 @@ require.config({
 
 require(['jquery', 'jqueryui'], function($) {
     require(['angular', 'angularui', 'app', 'controllers/todo'], function(angular) {
+        // Have control over the bootstrapping of the app, 
+        // instead of manually init it with ng-app on <html>
         angular.bootstrap(document, ['todoapp']);
     });
 });
