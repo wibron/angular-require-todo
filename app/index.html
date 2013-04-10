@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html ng-app>
+<html>
     <head>
         <title>Todo App - Angular &amp; requireJS</title>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans">
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
         
-        <div id="main" role="main" ng-controller="TodoCtrl"></div>
+        <div id="wrap" role="main" ng-view></div>
 
         <script src="js/vendor/require.js" data-main="js/main"></script>
 
