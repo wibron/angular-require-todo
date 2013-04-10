@@ -12,7 +12,7 @@
     <ul id="todos" ui-sortable ng-model="todos">
         <li ng-repeat="todo in todos" ng-class="{done: todo.done}">
             <input ng-click="update()" class="checkbox" ng-class="{done: todo.done}" type="checkbox" ng-model="todo.done" ng-checked="todo.done">
-            <label class="title" ng-dblclick="edit(todo)">{{todo.title}}</label>
+            <input type="text" class="title" ng-model="todo.title">
         </li>
     </ul>
 

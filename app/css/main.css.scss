@@ -113,6 +113,12 @@ h1 {
         }
         .title {
             padding-left: 10px;
+            -webkit-apperance: none;
+            border: 0;
+            font-size: 13px;
+            display: inline-block;
+            width: 80%;
+            background: transparent;
         }
     }
     .checkbox {
