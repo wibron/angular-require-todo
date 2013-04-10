@@ -1,49 +1,92 @@
+@mixin dashed ($pos) {
+    border-#{$pos}: 1px dashed #d1d1d1;
+}
+
 body {
     background: #fff;
-    font: 100% sans-serif;
+    font: 100% 'Noto Sans', sans-serif;
 }
 
 a {
     color: #448bc9;
     text-decoration: none;
+    &:focus {
+        outline: 1px dotted;
+    }
 }
 
 #wrap {
-    margin: 0 auto;
+    margin: 10% auto 0 auto;
     max-width: 500px;
+    border: 1px solid #d1d1d1;
+    padding: 10px 0;
+    border-radius: 4px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#main, footer {
+    padding: 0 20px;
 }
 
 header {
     text-align: center;
-    border-bottom: 1px dashed #d1d1d1;
+    @include dashed(bottom);
     margin-bottom: 20px;
 }
 
 h1 {
+    color: #333;
     margin: 0;
-    padding: 40px 0;
+    padding: 8% 0;
 }
 
 #todoText {
+    $gray: #b5b5b5;
     border-radius: 3px;
-    width: 75%;
-    padding: 5px 8px;
-    border: 1px solid #b5b5b5;
+    width: 70%;
+    padding: 10px 8px;
+    border: 1px solid $gray;
+    color: darken($gray, 20%);
     font-size: 90%;
     box-shadow: inset 0 2px 3px rgba(0, 0, 0, .05);
+    -webkit-transition: .15s ease-out;
+    box-sizing: border-box;
+    &:focus {
+        outline: 0;
+        box-shadow: inset 0 2px 3px rgba(0, 0, 0, .05), 0 0 7px #98cece;
+    }
+    @media screen and (max-width: 420px) {
+        width: 100%;
+    }
 }
 
 #add {
     font-size: 14px;
-    width: 20%;
+    width: 25%;
     float: right;
-    padding: 5px;
+    padding: 10px 5px;
     border: 1px solid #999;
     border-radius: 3px;
     color: #636262;
     text-shadow: 0 1px 0 #fff;
     font-weight: bold;
     background: -webkit-linear-gradient(top, #ebeae9 0%, #eae9e8 48%, #dfdedd 49%, #d7d5d4 100%);
+    box-shadow: inset 0 1px 0 #fff;
+    cursor: pointer;
+    -webkit-transition: .15s ease-out;
+    &:active {
+        position: relative;
+        top: 1px;
+        text-shadow: 0 -1px #fff;
+        background: -webkit-linear-gradient(top, darken(#ebeae9, 5%) 0%, darken(#eae9e8, 5%) 48%, darken(#dfdedd, 5%) 49%, darken(#d7d5d4, 5%) 100%);
+    }
+    &:focus {
+        outline: 0;
+        box-shadow: inset 0 1px 0 #fff, 0 0 7px #98cece;
+    }
+    @media screen and (max-width: 420px) {
+        width: 100%;
+    }
 }
 
 #todos {
@@ -52,29 +95,65 @@ h1 {
     li {
         padding: 15px;
         color: #333;
+        &:hover {
+            background-image: url("../img/drag.png");
+            background-repeat: no-repeat;
+            background-position: 95% center;
+        }
+        &:active {
+            cursor: move;
+        }
         &.done {
             color: #999;
-            text-decoration: line-through;
+            .title {
+                text-decoration: line-through;
+            }
         }
         &:nth-child(odd) {
-            background: #f5f7fa;
+            background-color: #f5f7fa;
+        }
+        .title {
+            padding-left: 10px;
+        }
+    }
+    .checkbox {
+        cursor: pointer;
+        &:after {
+            content: '';
+            cursor: pointer;
+            width: 19px;
+            height: 19px;
+            position: relative;
+            top: -4px;
+            left: -2px;
+            background: url("../img/checkboxes.png") no-repeat bottom left;
+            display: block;
+        }
+        &.done {
+            &:after {
+                background-position: top left;
+            }
         }
     }
 }
 
 
 footer {
+    @include dashed(top);
     white-space: nowrap;
     clear: both;
     overflow: hidden;
+    font-size: 90%;
     p {
         box-sizing: border-box;
         width: 50%;
+        color: #555;
     }
     .left {
         float: left;
     }
     .right {
         float: right;
+        text-align: right;
     }
 }
