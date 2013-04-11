@@ -1,6 +1,6 @@
 define(['app'], function(app) {
-    return app.controller('TodoCtrl', ['$scope', 'filterFilter',
-        function TodoCtrl ($scope, filterFilter) {
+    return app.controller('TodoCtrl', ['$scope',
+        function TodoCtrl ($scope) {
 
             var todos;
 
