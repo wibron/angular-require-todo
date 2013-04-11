@@ -12,11 +12,11 @@ define(['app'], function(app) {
             ];
 
             var getTodos = function() {
-                return JSON.parse(localStorage.getItem('todos') || JSON.stringify(initialTodos));
+                return JSON.parse(localStorage.getItem('TODOAPP_todos') || JSON.stringify(initialTodos));
             };
 
             var setTodos = function(todos) {
-                localStorage.setItem('todos', JSON.stringify(todos));
+                localStorage.setItem('TODOAPP_todos', JSON.stringify(todos));
             };
 
             // Set the $scope's todos to match the data inside localStorage
