@@ -103,6 +103,9 @@ h1 {
   background-repeat: no-repeat;
   background-position: 95% center;
 }
+#todos li:hover .delete {
+  opacity: .6;
+}
 #todos li:active {
   cursor: move;
 }
@@ -122,6 +125,18 @@ h1 {
   display: inline-block;
   width: 80%;
   background: transparent;
+}
+#todos li.noitems {
+  color: #444;
+  text-align: center;
+}
+#todos .delete {
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("../img/delete.png") no-repeat 90% center;
+  opacity: 0;
 }
 #todos .checkbox {
   cursor: pointer;

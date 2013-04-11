@@ -101,6 +101,9 @@ h1 {
             background-image: url("../img/drag.png");
             background-repeat: no-repeat;
             background-position: 95% center;
+            .delete {
+                opacity: .6;
+            }
         }
         &:active {
             cursor: move;
@@ -124,6 +127,18 @@ h1 {
             width: 80%;
             background: transparent;
         }
+        &.noitems {
+            color: #444;
+            text-align: center;
+        }
+    }
+    .delete {
+        vertical-align: middle;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: url("../img/delete.png") no-repeat 90% center;
+        opacity: 0;
     }
     .checkbox {
         cursor: pointer;

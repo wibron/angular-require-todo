@@ -11,8 +11,12 @@
 
     <ul id="todos" ui-sortable ng-model="todos">
         <li ng-repeat="todo in todos" ng-class="{done: todo.done}">
-            <input ng-click="update()" class="checkbox" ng-class="{done: todo.done}" type="checkbox" ng-model="todo.done" ng-checked="todo.done">
+            <input class="checkbox" ng-class="{done: todo.done}" type="checkbox" ng-model="todo.done" ng-checked="todo.done">
             <input type="text" class="title" ng-model="todo.title">
+            <a href="" ng-click="deleteTodo($index)" class="delete"><i class="deleteicon"></i></a>
+        </li>
+        <li ng-show="!todos.length" class="noitems">
+            No items left!
         </li>
     </ul>
 
