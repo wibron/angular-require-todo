@@ -4,8 +4,15 @@ define(['app'], function(app) {
 
             var todos;
 
+            var initialTodos = [
+                { title: 'Discuss report with John', done: false },
+                { title: 'Get a haircut', done: false },
+                { title: 'Pay electricity bill', done: false },
+                { title: 'Check gym hours', done: false }
+            ];
+
             var getTodos = function() {
-                return JSON.parse(localStorage.getItem('todos') || '[]');
+                return JSON.parse(localStorage.getItem('todos') || JSON.stringify(initialTodos));
             };
 
             var setTodos = function(todos) {
