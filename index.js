@@ -1,6 +1,5 @@
-var express = require('express')
-    connect = require('connect'),
-    fs = require('fs');
+var express = require('express'),
+    connect = require('connect');
 
 var app = express.createServer();
 app.configure(function() {
