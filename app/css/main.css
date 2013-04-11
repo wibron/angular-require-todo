@@ -36,16 +36,22 @@ h1 {
   padding: 8% 0;
 }
 
+form {
+  clear: both;
+  overflow: hidden;
+}
+
 #todoText {
   border-radius: 3px;
-  width: 68%;
+  width: 65%;
+  display: block;
+  float: left;
   padding: 10px 8px;
   border: 1px solid #b5b5b5;
   color: #828282;
   font-size: 90%;
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.05);
   -webkit-transition: .15s ease-out;
-  box-sizing: border-box;
 }
 #todoText:focus {
   outline: 0;
