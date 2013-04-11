@@ -20,10 +20,6 @@ a:focus {
   font-family: 'Merriweather Sans', sans-serif;
 }
 
-footer {
-  padding: 0 20px;
-}
-
 header {
   text-align: center;
   border-bottom: 1px dashed #d1d1d1;
@@ -174,11 +170,13 @@ footer {
   clear: both;
   overflow: hidden;
   font-size: 80%;
+  padding: 20px 20px 10px 20px;
 }
 footer p {
   box-sizing: border-box;
   width: 50%;
   color: #999;
+  margin: 0;
   font-weight: 200;
 }
 footer .left {
