@@ -172,12 +172,13 @@ footer {
   white-space: nowrap;
   clear: both;
   overflow: hidden;
-  font-size: 90%;
+  font-size: 80%;
 }
 footer p {
   box-sizing: border-box;
   width: 50%;
-  color: #555;
+  color: #999;
+  font-weight: 200;
 }
 footer .left {
   float: left;
