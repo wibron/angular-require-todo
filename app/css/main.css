@@ -20,7 +20,7 @@ a:focus {
   font-family: 'Merriweather Sans', sans-serif;
 }
 
-#main, footer {
+footer {
   padding: 0 20px;
 }
 
@@ -39,6 +39,7 @@ h1 {
 form {
   clear: both;
   overflow: hidden;
+  padding: 0 20px;
 }
 
 #todoText {
