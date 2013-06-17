@@ -1,7 +1,6 @@
 var express = require('express'),
-    connect = require('connect');
+    app = express();
 
-var app = express.createServer();
 app.configure(function() {
     app.use(express.logger());
     app.use('/app/', express.static(__dirname + '/app/'));
